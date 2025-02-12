@@ -1,0 +1,14 @@
+<div class="relative w-full overflow-hidden">
+    <div class="flex transition-transform duration-1000 ease-in-out" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
+      <div *ngFor="let slide of slides" class="w-full flex-shrink-0">
+        <img [src]="slide" class="w-full h-[500px] object-cover" alt="Slide Image">
+      </div>
+    </div>
+    <button (click)="prevSlide()" class="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full">
+      ❮
+    </button>
+    <button (click)="nextSlide()" class="absolute right-5 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full">
+      ❯
+    </button>
+  </div>
+  

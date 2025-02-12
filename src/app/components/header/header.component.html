@@ -1,0 +1,29 @@
+<header  [class.hidden]="isHidden" class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md shadow-md transition-all duration-300">
+    <div id="home" class="container mx-auto flex justify-between items-center py-4 px-6">
+        <a href="/" class="flex items-center gap-3 text-2xl font-bold text-white hover:text-gray-300 transition-all duration-300">
+            <span>Aijazahmed Shaikh</span>
+          </a>
+  
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="text-white hover:text-blue-400 font-semibold">Home</a>
+        <a href="#about" class="text-white hover:text-blue-400 font-semibold">About</a>
+        <a href="#services" class="text-white hover:text-blue-400 font-semibold">Services</a>
+        <a href="#contact" class="text-white hover:text-blue-400 font-semibold">Contact</a>
+      </nav>
+  
+      <button (click)="toggleMenu()" class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-16 6h16"></path>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div *ngIf="menuOpen" class="md:hidden bg-black/50 backdrop-blur-md py-4 px-6 space-y-4">
+      <a href="#home" class="block text-white hover:text-blue-400 font-semibold">Home</a>
+      <a href="#about" class="block text-white hover:text-blue-400 font-semibold">About</a>
+      <a href="#services" class="block text-white hover:text-blue-400 font-semibold">Services</a>
+      <a href="#contact" class="block text-white hover:text-blue-400 font-semibold">Contact</a>
+    </div>
+  </header>
+  
